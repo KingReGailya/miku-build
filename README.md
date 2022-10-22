@@ -1,5 +1,5 @@
 
-Miku build is a program written with bash-script to make it easyer 
+Miku build V1 is a program written with bash-script to make it easyer 
 to mass build differnt images on a schedule using cron 
 
 In order to install it first clone the git repo with
