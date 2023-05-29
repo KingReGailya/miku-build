@@ -17,6 +17,6 @@ RUN chmod u+x /bin/mikub
 COPY cron-config /etc/crontabs/root 
 RUN chmod 0644 /etc/crontabs/root 
 RUN crontab /etc/crontabs/root 
-RUN chmod u+x /mikua/build-info/build-custom/tasks.sh
+RUN chmod u+x /mikub/build-info/build-custom/tasks.sh
 
 WORKDIR /mikub/build-info/build-custom
