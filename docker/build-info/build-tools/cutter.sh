@@ -42,9 +42,6 @@ function confirmbasic(){
 
 }
 
-
-
-
 case $1 in
 
    "help" )
@@ -79,6 +76,13 @@ case $1 in
     "clear" )
         
         case $2 in
+
+            "cache" )
+
+                docker buildx prune -f
+                docker system prune -af
+
+            ;;
 
             "help" ) 
 

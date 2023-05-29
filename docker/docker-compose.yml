@@ -3,7 +3,7 @@ version: "3"
 services:
    mikua:
     container_name: mikub
-    image: mikub
+    image: kingregailya/mikub
     volumes:
       -  mikub-docker:/var/lib/docker
       - 'mikub-config:/mikub/build-info/build-custom'

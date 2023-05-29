@@ -54,11 +54,10 @@ case $branch in
         branch=""
     ;;
     *)        
-        branch=" --branch $4"
+        branch=" --branch $branch"
     ;;
 esac
 case $type in 
-
     "dir" )
         echo >> ../build-custom/$list/build-list/$name
         echo >> ../build-custom/$list/build-list/$name
@@ -90,7 +89,7 @@ case $type in
         echo "rm -r -v ../build-custom/$list/build-repos/$name" '>>' "../build-custom/$list/build-logs/$name/"'$date'"/1-rm.log" >> ../build-custom/$list/build-list/$name
         echo "git clone $repoLink $branch ../build-custom/$list/build-repos/$name" '>>' "../build-custom/$list/build-logs/$name/"'$date'"/2-copy.log" >> ../build-custom/$list/build-list/$name
         echo "docker" ' $builder ' "-t $imageName ../build-custom/$list/build-repos/$name/" '>>' "../build-custom/$list/build-logs/$name/"'$date'"/3-build.log" >> ../build-custom/$list/build-list/$name
-        echo "docker push $image" '>>' "../build-custom/$list/build-logs/$name/"'$date'"/4-push.log" >> ../build-custom/$list/build-list/$name
+        echo '$ignore'  "docker push $image" '>>' "../build-custom/$list/build-logs/$name/"'$date'"/4-push.log" >> ../build-custom/$list/build-list/$name
         echo >> ../build-custom/$list/build-list/$name
         echo >> ../build-custom/$list/build-list/$name
         echo "####" >> ../build-custom/$list/build-list/$name
