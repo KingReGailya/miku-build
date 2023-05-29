@@ -1,0 +1,5 @@
+#!/bin/bash
+loc=/mikub
+cd /mikub/build-info/build-tools
+
+/mikub/build-info/build-tools/mikub /mikub/build-info/build-tools $*

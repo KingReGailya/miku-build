@@ -1,0 +1,13 @@
+
+This will clear all or one frame in a given list
+seprate from the delete command this only removes the frames 
+the logs and repos will stay
+
+To clear all frames in a given list use
+
+mikua clear list LISTNAME 
+
+You can remvoe only the frame you want with 
+
+mikua clear list LIST-NAME frame FRAME-NAME
+

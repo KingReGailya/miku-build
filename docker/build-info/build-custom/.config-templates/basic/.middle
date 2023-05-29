@@ -1,0 +1,20 @@
+#This code goes After varibels but before frames
+
+case $builder in 
+    "build")
+        builder="build"
+        ignore=""
+    ;;
+    "buildx")
+        builder="buildx build --push --platform=$platforms"
+        ignore="#"
+    ;;
+esac
+case $logging in 
+    'true' )
+        logging='>>'
+    ;;
+    'false' )
+        logging='#'
+    ;;
+esac

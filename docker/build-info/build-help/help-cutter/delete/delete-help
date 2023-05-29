@@ -1,0 +1,13 @@
+
+This will delete all content of a list
+
+This is done by running 
+
+mikua delete list LIST-NAME
+
+This will delete all the data of the given list 
+
+mikua delete all 
+
+This will delete all the data for all lists
+

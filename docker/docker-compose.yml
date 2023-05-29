@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+   mikua:
+    container_name: mikub
+    image: mikub
+    volumes:
+      -  mikub-docker:/var/lib/docker
+      - 'mikub-config:/mikub/build-info/build-custom'
+    restart: unless-stopped
+    stdin_open: true 
+    tty: true
+    privileged: true
+
+volumes:
+  mikub-config:
+  mikub-docker:

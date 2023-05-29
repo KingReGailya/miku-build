@@ -1,0 +1,19 @@
+
+
+The clear command will clear data types from a list
+data types inculde Frames and Logs  
+
+here is and example command for this will use logs
+
+mikua clear logs list LIST-NAME frame FRAM-NAME date DATE
+
+note the date tage is also only avaible for the log data type
+
+If you do not inculde the frame option it will remove the all the logs for all frames
+however the date option is not availbe with out the frame option
+
+Here is an example command
+
+
+mikua clear logs frame FRAME-NAME date DATE
+

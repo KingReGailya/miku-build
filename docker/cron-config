@@ -1,0 +1,3 @@
+
+0 1 * * * /mikub/build-info/build-custom/tasks.sh
+

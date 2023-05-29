@@ -1,0 +1,21 @@
+
+The show commad will show information about a list or frame
+you can chose which list you want to see and which frame from that list  
+
+
+mikua show list LIST-NAME
+
+To show a chossen frame add
+
+mikua show list frame FRAME-NAME
+
+You can also see all knowen list with 
+
+mikua show lists
+
+
+
+Note:
+    
+    List and lists are differnt commands
+

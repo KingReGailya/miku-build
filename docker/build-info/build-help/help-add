@@ -1,0 +1,45 @@
+
+This command let's you add a new Frame's to a List's
+
+It also lets you add Plugins and Templates to your mikua installation
+
+In order to a Frame 
+
+    mikua add list LIST-NAME NAME LINK 
+
+The name option reffers to what mikua will call this Frame 
+and the LIST-NAME will tell mikua where to put the Frame
+
+In order to add a Template or plugin use
+
+    mikua add TYPE LINK SELECTION NAME
+
+The Type in this example is what type you are trying to add
+so if you are trying to add a template put template there
+if you want to add a plugin put plugin
+
+The Link in this example is the link to the repo in which the template and plugins are stored
+
+The Selection in this example it the plugin or template you are adding
+
+The Name in this example is the name of the imported Plugin or Template
+if left blank then the it will use the name of the selection
+
+For a full command example
+
+    mikua add plugin https://kingregailya/mikua-addons.git helloworld hello
+
+For an example of a plugins use
+
+    mikua hello foo
+
+The response will have the terminal echo bar
+
+Note some plugins will have extra reqirued programs 
+inorder to install these run 
+
+    mikua install hello
+
+The response of this will be and error as the hello world plugin does not need any extra programs
+however if you are to install example2 instead of helloworld then it will install everything in the "required" file 
+

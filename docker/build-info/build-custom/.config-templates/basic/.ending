@@ -1,0 +1,10 @@
+
+
+
+case $remove in 
+    true )
+        rm -rfv ../build-custom/$list/$list-builder.sh
+        ;;
+    false )
+        ;;
+esac

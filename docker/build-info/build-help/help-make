@@ -1,0 +1,6 @@
+
+The make command compiles a selected list in to a bash script for use in a cronjob 
+to use this command do
+
+mikua make LIST-NAME
+

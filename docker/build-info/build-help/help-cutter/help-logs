@@ -1,0 +1,24 @@
+
+This will clear the logs of any Frame / List 
+
+You can use the list option to specify the list you want to clear from
+if you to not use it will clear from the default list
+
+For example:
+
+mikua clear logs list LIST-NAME 
+
+You can use the frame option to specify the frame you want to clear logs from
+If you don't use it, it will clear logs from all frames
+
+For example:
+
+mikua clear logs list LIST-NAME frame EXAMPLE-FRAME
+
+You can use the date option to specify the date of the log you want removed
+If you don't inculde it will removes all of the frames logs
+
+For example:
+
+mikua clear logs list LIST-NAME frame FRAME-NAME date DATE
+

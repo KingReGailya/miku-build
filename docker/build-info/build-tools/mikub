@@ -1,0 +1,124 @@
+#!/bin/bash
+
+loc=$1
+
+case $2 in
+        "add"  )
+                case $3 in
+                        "help" )
+                                cat ../build-help/help-add
+                        ;;
+                        "template" ) 
+                                $loc/plugin.sh $3 $4 $5 $6 $7 $8 $9
+                        ;;
+                        "plugin" )
+
+                                $loc/plugin.sh $3 $4 $5 $6 $7 $8 $9
+                        ;;
+                        "list" ) 
+                               $loc/build-frame.sh $4 $5 $6 $7 $8 $9      
+                        ;;
+                        * )
+                                echo unknown tool
+                                echo If you are trying to use a plugin use the name the plugin was imported with
+                        ;;
+                esac 
+        ;;
+        "make" )
+                case $3 in
+                        * )
+                                $loc/make.sh $3 $4 $5 $6 $7 $8 $9
+                        ;; 
+                esac
+        ;;
+        "new" )
+                case $3 in 
+                        "list" )
+                                $loc/newlist.sh $4 $5 $6 $7 $8 $9 
+                        ;;
+                        "help" )
+                                cat ../build-help/help-new
+                        ;;
+                esac
+        ;;
+        "delete" )
+                case $3 in
+                * )
+                        $loc/cutter.sh $3 $4
+                ;;
+                esac
+        
+        ;;
+
+        "clear" )
+                
+                $loc/cutter.sh $2 $3 $4 $5 $6 $7 $8 $9
+      
+        ;;
+
+        "show"  )
+     
+                $loc/show.sh $3 $4 $5 $6 $7 $8 $9 
+     
+        ;;
+
+        "help" )
+     
+                cat ../build-help/help
+     
+        ;;
+
+        "run" )
+                case $3 in
+                        
+                        "help" )
+
+                                cat ../build-help/help-run
+                        
+                        ;;
+ 
+                        "list" )
+
+                                $loc/run.sh $4 $5 $6 $7 $8 $9
+
+                        ;;
+
+
+                        * )
+                                
+                                ../build-custom/$3/$3-builder.sh
+                                
+                        ;;
+
+                esac
+
+        ;;
+
+        "install" )
+
+                ../../install.sh
+
+        ;;
+
+        "data" )
+
+                ./import-export.sh $loc $3 $4 $5 $6 $7 $8 $9
+
+        ;;
+
+        * )
+
+                case $3 in 
+
+                        "install" )
+                                reqired=`cat ../build-custom/.custom-tools/$2/reqired`
+                                apt update
+                                apt install -y $reqired
+                        ;;
+
+                esac
+
+                ../build-custom/.custom-tools/$2/main.sh $loc $3 $4 $5 $6 $7 $8 $9
+        ;;
+
+esac

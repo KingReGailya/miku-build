@@ -1,0 +1,19 @@
+FROM docker
+RUN apk update
+RUN apk add bash nano git zip 
+COPY ./build-info /mikub/build-info
+COPY cron-config /mikub/cron-config
+COPY ./mikub /bin/mikub
+COPY install.sh /install.sh 
+
+RUN chmod u+x /mikub/build-info/build-tools/*
+
+#Makes cron 
+#COPY cron-config /etc/cron.d/cron-config
+#RUN chmod 0644 /etc/cron.d/cron-config
+#RUN crontab /etc/cron.d/cron-config
+#RUN touch /var/log/cron.log
+#CMD cron && tail -f /var/log/cron.log
+#RUN chmod u+x /mikub/build-info/build-custom/tasks.sh
+
+WORKDIR /mikub/build-info/build-custom

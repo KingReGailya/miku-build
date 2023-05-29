@@ -1,0 +1,18 @@
+
+Use this command to make a new list
+
+Run
+
+mikua new list LIST-TEMPLATE LIST NAME
+
+LIST-TEMPLATE reffers to the template that this new list will use
+by default there are two templates 
+
+song and video
+
+altho more can be added.
+
+This command will make a new list named my-music from the song template 
+
+mikua new list song my-music 
+
